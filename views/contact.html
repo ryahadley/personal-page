@@ -1,0 +1,22 @@
+
+  <div class="main-content">
+    <link rel='stylesheet' href='styles/contact.css'>
+        <section class="contact-me">
+        <h3>Contact Me</h3>
+
+        <section class='contact-form'>
+          <form id='comments'>
+            <h2>Leave Some Feedback</h2>
+            <br><hr />
+            <br>
+
+            <div class='visitor-comments' ng-repeat='comment in comments'>
+              {{comment}}
+            </div>
+
+            <input type='text' class='say-something' ng-model='message' placeholder='Say something...'>
+            <button type='submit' class='sub-btn' ng-click='adding(message)'>Submit</button>
+          </form>
+        </section>
+    <div ui-view></div>
+  </div>

@@ -1,36 +1,11 @@
-<!DOCTYPE html>
-<html ng-app="app" lang="en">
-<head>
-<meta charset="UTF-8">
-<title>jQuery Move an Element to Left/Right/Up/Down Using Arrow Keys</title>
-<link rel="stylesheet" href="style.css">
 
-</head>
-<body>
-    <main>
-    
-    <section class="nav-bar">
-        <div class="box"></div>
+    <div class="main-content">
+    <section class="project">
+        <h3>Projects</h3>
     </section>
-    
-    <section class="personal-info">
-        <ul class="person-links">
-            <li>About Me</li>
-            <a ui-sref="projects"><li>Projects</li></a>
-            <li>Awards</li>
-            <li>Goals</li>
-            <li>Contact Me</li>
-        </ul>
-    </section>
-    </main>
-        
-    <div ui-view>
-        
+
+    <div class='coming-soon'>
+
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
-<script src="angular.js"></script>
-</body>
-</html> 
+    <div ui-view ng-init='typewriter()'></div>
+    </div>

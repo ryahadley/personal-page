@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Crete+Round|Open+Sans+Condensed:300|Gentium+Basic);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, main, {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Gentium Basic";
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.person-links a:hover {
+    color: rgb(163, 163, 163);
+}
+
+.personal-links a:hover {
+    opacity: .6;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+
+.hamgburger {
+  width: 100%;
+  height: 220%;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: url("/styles/img/octopus-ship.jpg");
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.hamgburger img {
+  opacity: .4;
+}
+
+.vis {
+  opacity: 1;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 220px;
+    margin: auto;
+    background: url("/styles/img/ocean-waves.jpg");
+    background-position: 0px 0px;
+	  background-repeat: inherit;
+	  animation: animatedBackground 90s linear infinite;
+}
+
+.character {
+    width: 170px;
+    height: 200px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+    background: url("/styles/img/beard-avatar.png") center no-repeat rgb(29.7%, 37.6%, 44.5%);
+    border-radius: 50%;
+ }
+
+.coming-soon {
+  margin: auto;
+  text-align: center;
+  font-size: 200px;
+  margin-bottom: 100px;
+  border: 10px solid black;
+  background: rgba(24, 24, 24, 0.8);
+  color: white;
+}
+
+
+.languages {
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  text-align: center;
+}
+
+.personal-info  {
+  padding: 10px;
+  height: 70%;
+  margin-top: 15px;
+}
+
+.personal-links {
+    display: flex;
+    flex-direction: columnn;
+    justify-content: space-between;
+    padding:  0 5%;
+    list-style: none;
+    font-family: ocean, Arial, Helvetica, sans-serif;
+    font-size: 240%;
+}
+
+.person-links {
+  font-family: ocean, Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 180%;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  font-family: "Gentium Basic";
+  font-size: 300%;
+}
+
+.person-links li {
+    cursor: pointer;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.contact-me {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.my-paragraph {
+  padding: 0 20% 5% 20%;
+  margin: auto;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.my-paragraph li {
+  margin-bottom: 30px;
+}
+
+.social-media-wrapper {
+    width: 100%;
+    background: #555;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    clear: both;
+}
+
+.social-media-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.social-media-links img {
+    margin-left: 10px;
+}
+
+.social-media-links a:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.myCopyright {
+  text-align: center;
+}
+
+#view.ng-enter {
+  opacity: 0;
+  transition: 1s linear;
+}
+#view.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+#view.ng-leave {
+  opacity: 1;
+  transition: .3s linear;
+}
+#view.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+/*@media (min-width: 800px) {
+  .person-links {
+    display: none;
+  }
+}*/
+
+@media (max-width: 700px) {
+  .nav-bar {
+      width: 100%;
+      height: 150px;
+      margin: auto;
+      background: url("/styles/img/ocean-waves.jpg");
+    }
+    .personal-links {
+      display: none;
+    }
+    .character {
+      width: 95px;
+      height: 125px;
+      background: url("/styles/img/beard-avatar-copy.png") center no-repeat rgb(29.7%, 37.6%, 44.5%);
+    }
+    .person-links {
+      font-size: 20px;
+    }
+    /*@keyframes animatedBackground {
+    	from { background-position: 0 0; }
+    	to { background-position: 0 0; }
+    }*/
+}

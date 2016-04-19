@@ -3,31 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Ryan Hadley</title>
-<link rel="stylesheet" href="styles/style.css">
+<link rel='stylesheet' href='styles/style.css'>
 
 <body ng-controller='appCtrl'>
    <main>
 
-    <header-directive></header-directive>
-    <div ui-view id='view'></div>
-    <app-directive footer-links='footTag'></app-directive>
+<div class='header'>
+    <section class="nav-bar" ng-click='showAdd = !showAdd'>
+        <div id='view' class="character" ng-click='showAdd = !showAdd' ng-show='showAdd'></div>
+    </section>
+</div>
 
+    <div ui-view id='view'></div>
   </main>
 
-<!--Angular  -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-
-<!--Jquery  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<srcipt src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
 <script src="js/angular.js"></script>
 <script src='js/controller.js'></script>
 <script src='js/jquerymovement.js'></script>
 <script src='js/services.js'></script>
 <script src="js/directives.js"></script>
-<script src="js/typed.js"></script>
 </body>
 </html>
