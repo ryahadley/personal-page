@@ -96,7 +96,7 @@ if( collision($('.character'), $('.aboutMe')) &&
 }
 if( collision($('.character'), $('.projects'))  &&
     window.location.href !== "127.0.0.1:8080/#/projects") {
-    window.location.pathname = '' + 'projects';
+    window.location.pathname = '' + '/projects';
     //("http://127.0.0.1:8080/#/projects");
     reset();
 }
