@@ -90,13 +90,13 @@ var reset = function() {
 
 if( collision($('.character'), $('.aboutMe')) &&
     window.location.href !== "127.0.0.1:8080/#/aboutMe") {
-    window.location.pathname = '/aboutMe';
+    window.location.pathname = '';
     // ("http://127.0.0.1:8080/#/aboutMe");
     reset();
 }
 if( collision($('.character'), $('.projects'))  &&
     window.location.href !== "127.0.0.1:8080/#/projects") {
-    window.location.pathname = '/projects';
+    window.location.pathname = '' + 'projects';
     //("http://127.0.0.1:8080/#/projects");
     reset();
 }
