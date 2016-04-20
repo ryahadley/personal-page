@@ -1,3 +1,6 @@
+angular.module('app').service('jqueryService', function() {
+
+this.movement = function() {
   var movementSpeed = 30;
   var navvv = $('.header');
   var character = $('.character').offset();
@@ -110,3 +113,11 @@ if( collision($('.character'), $('.contactMe'))  &&
     reset();
 }
 }, 500);
+
+$(function() {
+  $( ".character" ).draggable();
+})
+
+}
+
+});

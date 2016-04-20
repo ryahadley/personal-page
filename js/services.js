@@ -46,8 +46,4 @@ angular.module('app').service('appService', function() {
     }, 30);
   }, 8000);
 }
-
-    $(function() {
-      $( ".character" ).draggable();
-    })
 });

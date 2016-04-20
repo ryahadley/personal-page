@@ -1,4 +1,4 @@
-angular.module('app').controller('appCtrl', function($scope, appService) {
+angular.module('app').controller('appCtrl', function($scope, appService, jqueryService) {
 
     $scope.comments = appService.showComments();
 
@@ -11,12 +11,6 @@ angular.module('app').controller('appCtrl', function($scope, appService) {
     }
 
     $scope.showAdd = true;
-    //      function() {
-    //   // if($(document).mousedown()) {
-    //   // return false;
-    //   // }
-    //   return false;
-    // };
 
     $scope.typewriter = function() {
       appService.typeout();
@@ -31,5 +25,7 @@ angular.module('app').controller('appCtrl', function($scope, appService) {
          $scope.flashy();
        });
     }
+
+    $scope.mover = jqueryService.movement;
 
 });

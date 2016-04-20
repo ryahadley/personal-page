@@ -8,23 +8,7 @@
 <body ng-controller='appCtrl'>
    <main>
 
-     <section class="nav-bar">
-         <div class="character" ng-click='showAdd = !showAdd'>
-           <div class='hamgburger' ng-show='!showAdd' ng-class='{vis: showAdd}'>
-           <section class="personal-info">
-             <ul class="person-links">
-                 <a ui-sref="home"><li id='aboutMe'>Home</li></a>
-                 <a ui-sref="projects"><li id='projects'>Projects</li></a>
-                 <a ui-sref="interests"><li id='interests'>Interests</li></a>
-                 <a ui-sref="goals"><li id='goals'>Goals</li></a>
-                 <a ui-sref="contact"><li id='contactMe'>Contact Me</li></a>
-             </ul>
-           </section>
-           </div>
-         </div>
-     </section>
-
-    <header-directive></header-directive>
+    <header-directive move="mover()"></header-directive>
     <div ui-view id='view'></div>
     <app-directive footer-links='footTag'></app-directive>
 

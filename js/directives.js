@@ -13,10 +13,15 @@ angular.module("app").directive('appDirective', function() {
     return {
       restriction: 'E,A',
       scope: {
-        head: "=headers"
+        head: "=headers",
+        move: "&"
       },
       templateUrl: '/views/header.html',
       controller: function($scope) {
+        setTimeout(function() {
+          $scope.move()
+        }, 500)
+
       }
     }
 });
