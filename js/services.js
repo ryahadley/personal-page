@@ -22,7 +22,7 @@ angular.module('app').service('appService', function() {
       window.setTimeout(function() {
       var SI = setInterval(function() {
 
-        var div = $('.coming-soon');
+        var div = $('.typewriter-color');
 
         div.append(split[counter])
         counter++;
@@ -31,5 +31,23 @@ angular.module('app').service('appService', function() {
         }
       }, 200)
       }, 2000);
-    }
-})
+  }
+
+  this.flashyfuck = function() {
+    var colors = ['green', 'red', 'blue', 'yellow', 'orange', 'black', 'white', 'purple'];
+    var $container = $('.typewriter-color');
+    window.setTimeout(function() {
+    setInterval(function() {
+
+        var rand = Math.floor(Math.random() * 10);
+
+        $container.css("background", colors[rand]);
+
+    }, 30);
+  }, 8000);
+}
+
+    $(function() {
+      $( ".character" ).draggable();
+    })
+});

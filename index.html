@@ -8,6 +8,22 @@
 <body ng-controller='appCtrl'>
    <main>
 
+     <section class="nav-bar">
+         <div class="character" ng-click='showAdd = !showAdd'>
+           <div class='hamgburger' ng-show='!showAdd' ng-class='{vis: showAdd}'>
+           <section class="personal-info">
+             <ul class="person-links">
+                 <a ui-sref="home"><li id='aboutMe'>Home</li></a>
+                 <a ui-sref="projects"><li id='projects'>Projects</li></a>
+                 <a ui-sref="interests"><li id='interests'>Interests</li></a>
+                 <a ui-sref="goals"><li id='goals'>Goals</li></a>
+                 <a ui-sref="contact"><li id='contactMe'>Contact Me</li></a>
+             </ul>
+           </section>
+           </div>
+         </div>
+     </section>
+
     <header-directive></header-directive>
     <div ui-view id='view'></div>
     <app-directive footer-links='footTag'></app-directive>
@@ -22,12 +38,12 @@
 <!--Jquery  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <srcipt src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
 <script src="js/angular.js"></script>
 <script src='js/controller.js'></script>
 <script src='js/jquerymovement.js'></script>
 <script src='js/services.js'></script>
 <script src="js/directives.js"></script>
-<script src="js/typed.js"></script>
 </body>
 </html>

@@ -6,7 +6,6 @@ angular.module("app").directive('appDirective', function() {
     },
     templateUrl: '/views/footer.html',
     controller: function($scope) {
-
     }
   }
 }).
@@ -18,7 +17,6 @@ angular.module("app").directive('appDirective', function() {
       },
       templateUrl: '/views/header.html',
       controller: function($scope) {
-
       }
     }
-  });
+});

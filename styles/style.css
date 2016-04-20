@@ -44,7 +44,6 @@ a:visited {
   border: 1px solid white;
   border-radius: 5px;
   background: url("/styles/img/octopus-ship.jpg");
-  opacity: 0;
   transition: opacity .5s ease;
 }
 
@@ -92,6 +91,14 @@ a:visited {
   height: 250px;
   margin: auto;
   text-align: center;
+}
+.typewriter-color {
+  border: 3px solid rgb(26, 85, 66);
+  padding: 1%;
+}
+
+.typewriter-container {
+  padding: 0 10% 0 10%;
 }
 
 .personal-info  {
@@ -146,7 +153,7 @@ h3 {
 }
 
 .my-paragraph {
-  padding: 0 20% 5% 20%;
+  padding: 0 20% 0 20%;
   margin: auto;
   font-size: 20px;
   font-family: sans-serif;

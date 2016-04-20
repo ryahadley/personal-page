@@ -10,10 +10,26 @@ angular.module('app').controller('appCtrl', function($scope, appService) {
       $('#comments').find('input').val('');
     }
 
-    $scope.showAdd = false;
+    $scope.showAdd = true;
+    //      function() {
+    //   // if($(document).mousedown()) {
+    //   // return false;
+    //   // }
+    //   return false;
+    // };
 
     $scope.typewriter = function() {
       appService.typeout();
+    }
+
+    $scope.flashy = function() {
+      appService.flashyfuck();
+    }
+
+    $scope.testy = function() {
+      $.when( $scope.typewriter() ).done(function() {
+         $scope.flashy();
+       });
     }
 
 });

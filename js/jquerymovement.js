@@ -1,15 +1,12 @@
   var movementSpeed = 30;
-  var topMovementSpeed = 10;
   var navvv = $('.header');
   var character = $('.character').offset();
 
   var leftMarginLimit = parseInt($('.character').parent().css('width')) - 100 - parseInt($('.character').css('width'));
   var topMarginLimit = parseInt($('.character').parent().css('height')) - 20 - parseInt($('.character').css('height'));
-  var bottomMarginLimit = parseInt(navvv.offset().top + parseInt(navvv.height()));
 
   var leftMargin = parseInt($('.character').css('margin-left'));
   var topMargin = parseInt($('.character').css('margin-top'));
-  var bottomMargin = parseInt(character.top + parseInt($('.character').height()));
 
   $(document).keydown(function(key) {
 
@@ -34,27 +31,30 @@
       // UP
       if (key.which == 38)
       {
+        if($('.character').offset().top > 15) {
           key.preventDefault();
           $(".character").finish().animate({
               top: "-=20"
           });
+        }
           // $('.character').css({'margin-top': topMargin+'px'});
       }
 
       // DOWN
       if (key.which == 40)
       {
+        if($('.character').offset().top < 150) {
           key.preventDefault();
           $(".character").finish().animate({
               top: "+=20"
           });
+        }
           // $('.character').css({'margin-bottom': bottomMargin+'px'});
       }
-      if (key.which == 32)
+      if (key.which == 16)
       {
         key.preventDefault();
-        $('.character').css({'top': '10px'})
-        //$('.character').css({'left': '40px'});
+        $('.character').css({'top': '10px', 'left': '40px !important'});
       }
   });
 
@@ -78,7 +78,10 @@ function collision($div1, $div2) {
      return true;
    }
 var reset = function() {
+  if($(document).mouseup()) {
   $('.character').css({'top': '10px'});
+  $('.character').css({'left': '40px'});
+  }
 }
 
 if( collision($('.character'), $('.aboutMe')) &&
