@@ -90,32 +90,27 @@ var reset = function() {
 
 if( collision($('.character'), $('.aboutMe')) &&
     window.location.href !== "127.0.0.1:8080/#/aboutMe") {
-    window.location.pathname = encodeURIComponent('/#/');
-    // ("http://127.0.0.1:8080/#/aboutMe");
+    window.location.assign("http://127.0.0.1:8080/#/aboutMe");
     reset();
 }
 if( collision($('.character'), $('.projects'))  &&
     window.location.href !== "127.0.0.1:8080/#/projects") {
-    window.location.pathname = encodeURIComponent('/#/projects');
-    //("http://127.0.0.1:8080/#/projects");
+    window.location.assign("http://127.0.0.1:8080/#/projects");
     reset();
 }
 if( collision($('.character'), $('.interests'))  &&
     window.location.href !== "127.0.0.1:8080/#/interests") {
-    window.location.pathname = encodeURIComponent('/#/interests');
-    //("http://127.0.0.1:8080/#/interests");
+    window.location.assign("http://127.0.0.1:8080/#/interests");
     reset();
 }
 if( collision($('.character'), $('.goals'))  &&
     window.location.href !== "127.0.0.1:8080/#/goals") {
-    window.location.pathname = encodeURIComponent('/#/goals');
-    //("http://127.0.0.1:8080/#/goals");
+    window.location.assign("http://127.0.0.1:8080/#/goals");
     reset();
 }
 if( collision($('.character'), $('.contactMe'))  &&
     window.location.href !== "127.0.0.1:8080/#/contact") {
-    window.location.pathname = encodeURIComponent('/#/contact');
-    //("http://127.0.0.1:8080/#/contact");
+    window.location.assign("http://127.0.0.1:8080/#/contact");
     reset();
 }
 }, 500);
