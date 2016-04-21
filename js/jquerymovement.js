@@ -89,28 +89,32 @@ var reset = function() {
 
 
 if( collision($('.character'), $('.aboutMe')) &&
-    window.location.href !== "127.0.0.1:8080/#/aboutMe") {
-    window.location.assign("http://127.0.0.1:8080/#/aboutMe");
+    window.location.hash !== "aboutMe") {
+    window.location.hash = "/"; //("http://127.0.0.1:8080/#/");
     reset();
 }
 if( collision($('.character'), $('.projects'))  &&
-    window.location.href !== "127.0.0.1:8080/#/projects") {
-    window.location.assign("http://127.0.0.1:8080/#/projects");
+    window.location.hash !== "projects") {
+    window.location.hash = "projects";
+    //("http://127.0.0.1:8080/#/projects");
     reset();
 }
 if( collision($('.character'), $('.interests'))  &&
-    window.location.href !== "127.0.0.1:8080/#/interests") {
-    window.location.assign("http://127.0.0.1:8080/#/interests");
+    window.location.hash !== "interests") {
+    window.location.hash = "interests";
+    //("http://127.0.0.1:8080/#/interests");
     reset();
 }
 if( collision($('.character'), $('.goals'))  &&
-    window.location.href !== "127.0.0.1:8080/#/goals") {
-    window.location.assign("http://127.0.0.1:8080/#/goals");
+    window.location.hash !== "goals") {
+    window.location.hash = "goals";
+    //("http://127.0.0.1:8080/#/goals");
     reset();
 }
 if( collision($('.character'), $('.contactMe'))  &&
-    window.location.href !== "127.0.0.1:8080/#/contact") {
-    window.location.assign("http://127.0.0.1:8080/#/contact");
+    window.location.hash !== "contact") {
+    window.location.hash = "contact";
+    //("http://127.0.0.1:8080/#/contact");
     reset();
 }
 }, 500);
